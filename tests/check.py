@@ -50,6 +50,26 @@ def overflow(page, width: int):
           const style = getComputedStyle(el);
           if (style.position === "fixed" || style.position === "sticky") return;
           if (style.overflowX === "auto" || style.overflowX === "scroll") return;
+          if (el.closest("svg") || el.tagName === "svg") {
+            const host = el.closest(".hero-art, .hero") || el.parentElement;
+            if (host) {
+              const hs = getComputedStyle(host);
+              if (hs.overflow === "hidden" || hs.overflowX === "hidden") return;
+            }
+          }
+          let anc = el.parentElement;
+          let clipped = false;
+          while (anc && anc !== document.body) {
+            const st = getComputedStyle(anc);
+            if (st.overflowX === "hidden" || st.overflow === "hidden") {
+              const cr = anc.getBoundingClientRect();
+              if (r.right <= cr.right + 1 && r.left >= cr.left - 1) { clipped = true; break; }
+              // fully intended bleed inside a clipped art container
+              if (anc.classList.contains("hero-art") || anc.classList.contains("hero")) { clipped = true; break; }
+            }
+            anc = anc.parentElement;
+          }
+          if (clipped) return;
           offenders.push({
             sel: el.tagName.toLowerCase() + (el.id ? "#" + el.id : ""),
             right: Math.round(r.right),
@@ -97,6 +117,71 @@ def main():
                 "() => document.querySelectorAll('article[data-topic=\"money\"]:not(.hidden)').length"
             )
             assert_true(visible_money == 6, f"default money articles expected 6, got {visible_money}")
+
+            hidden_wrap_vis = page.evaluate(
+                "() => { const el = document.getElementById('hidden-filter-wrap'); return !!(el && !el.hidden && getComputedStyle(el).display !== 'none'); }"
+            )
+            assert_true(not hidden_wrap_vis, "hidden filter should not show on money tab")
+
+            # contrast of key surfaces
+            contrast_fail = page.evaluate(
+                """() => {
+                  function lum(c) {
+                    const m = c.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+                    if (!m) return null;
+                    const s = [m[1], m[2], m[3]].map(v => {
+                      v = Number(v) / 255;
+                      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+                    });
+                    return 0.2126 * s[0] + 0.7152 * s[1] + 0.0722 * s[2];
+                  }
+                  function ratio(fg, bg) {
+                    const L1 = lum(fg), L2 = lum(bg);
+                    if (L1 == null || L2 == null) return 99;
+                    const a = Math.max(L1, L2), b = Math.min(L1, L2);
+                    return (a + 0.05) / (b + 0.05);
+                  }
+                  const checks = [];
+                  const samples = [
+                    [document.querySelector('.lead'), 4.5],
+                    [document.querySelector('.hero-copy h1'), 3.0],
+                    [document.querySelector('.tile-title'), 4.5],
+                    [document.querySelector('.meta'), 4.5],
+                    [document.querySelector('.caption'), 3.0],
+                    [document.querySelector('.card h2'), 4.5],
+                    [document.querySelector('.wordmark'), 4.5],
+                    [document.querySelector('.btn-map'), 4.5],
+                  ];
+                  for (const [el, min] of samples) {
+                    if (!el) { checks.push({sel: 'missing', r: 0, min}); continue; }
+                    const st = getComputedStyle(el);
+                    let bgEl = el;
+                    let bg = 'rgba(0,0,0,0)';
+                    while (bgEl) {
+                      bg = getComputedStyle(bgEl).backgroundColor;
+                      const L = lum(bg);
+                      const m = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+                      const opaque = m && (bg.indexOf('rgba') === -1 || !bg.endsWith(', 0)') && !bg.endsWith(', 0.0)'));
+                      // treat near-transparent as continue
+                      const alpha = bg.startsWith('rgba') ? Number((bg.split(',')[3] || '1').replace(')','')) : 1;
+                      if (alpha >= 0.85) break;
+                      bgEl = bgEl.parentElement;
+                    }
+                    if (!bgEl) bg = 'rgb(7, 10, 18)';
+                    const r = ratio(st.color, bg);
+                    if (r < min) checks.push({sel: el.className || el.tagName, color: st.color, bg, r: Math.round(r*100)/100, min});
+                  }
+                  return checks;
+                }"""
+            )
+            assert_true(not contrast_fail, f"contrast failures: {contrast_fail}")
+
+            page.click('.tile[data-goto="tips"]')
+            tips_from_tile = page.evaluate(
+                "() => [...document.querySelectorAll('article.card:not(.hidden)')].map(e => e.getAttribute('data-topic'))"
+            )
+            assert_true(len(tips_from_tile) == 4 and all(t == "tips" for t in tips_from_tile), f"tile tips failed: {tips_from_tile}")
+            page.select_option("#topic", "money")
 
             page.select_option("#topic", "tips")
             tips = page.evaluate(

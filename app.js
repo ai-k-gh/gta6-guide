@@ -17,6 +17,7 @@
   var introMoney = document.getElementById("intro-money");
   var introHidden = document.getElementById("intro-hidden");
   var introMap = document.getElementById("intro-map");
+  var checkLink = document.getElementById("check-link");
 
   function marks() {
     try {
@@ -51,6 +52,25 @@
       .trim();
   }
 
+  function syncChrome() {
+    document.querySelectorAll(".tile[data-goto]").forEach(function (tile) {
+      tile.setAttribute("aria-pressed", tile.getAttribute("data-goto") === topic ? "true" : "false");
+    });
+    if (checkLink) {
+      checkLink.classList.toggle("is-on", topic === "check");
+      checkLink.setAttribute("aria-current", topic === "check" ? "page" : "false");
+    }
+    if (topicSelect && topicSelect.value !== topic) topicSelect.value = topic;
+    if (moneyFilter && moneyFilter.value !== moneyStage) moneyFilter.value = moneyStage;
+    if (hiddenFilter && hiddenFilter.value !== hiddenKind) hiddenFilter.value = hiddenKind;
+    document.querySelectorAll("#money-filter-wrap .pill[data-stage]").forEach(function (pill) {
+      pill.setAttribute("aria-pressed", pill.getAttribute("data-stage") === moneyStage ? "true" : "false");
+    });
+    document.querySelectorAll("#hidden-filter-wrap .pill[data-kind]").forEach(function (pill) {
+      pill.setAttribute("aria-pressed", pill.getAttribute("data-kind") === hiddenKind ? "true" : "false");
+    });
+  }
+
   function apply() {
     var q = query.trim().toLowerCase();
     var shown = 0;
@@ -62,22 +82,15 @@
       var okStage = topic !== "money" || moneyStage === "all" || stage === moneyStage;
       var okKind = topic !== "hidden" || hiddenKind === "all" || kind === hiddenKind;
       var okSearch = !q || textOf(card).indexOf(q) !== -1;
-      var show;
-      if (q) {
-        show = okSearch;
-      } else {
-        show = okTopic && okStage && okKind;
-      }
+      var show = q ? okSearch : okTopic && okStage && okKind;
       card.classList.toggle("hidden", !show);
       if (show) shown += 1;
     });
 
     var alwaysMap = document.getElementById("map-shortcut");
     if (alwaysMap) {
-      alwaysMap.classList.toggle("hidden", !(!q && (topic === "money" || topic === "tips" || topic === "hidden" || topic === "check")));
-      /* keep the shortcut visible on non-map tabs; hide only when already in map or searching */
-      if (topic === "map") alwaysMap.classList.add("hidden");
-      if (q) alwaysMap.classList.add("hidden");
+      /* Dock already has a map launch; show the explanation card on the map topic. */
+      alwaysMap.classList.toggle("hidden", topic !== "map" || !!q);
     }
 
     if (introMoney) introMoney.classList.toggle("hidden", !(topic === "money" && !q));
@@ -86,6 +99,16 @@
     if (moneyFilterWrap) moneyFilterWrap.hidden = topic !== "money";
     if (hiddenFilterWrap) hiddenFilterWrap.hidden = topic !== "hidden";
     if (empty) empty.hidden = shown > 0;
+    syncChrome();
+  }
+
+  function setTopic(next, scrollTo) {
+    topic = next;
+    apply();
+    if (scrollTo) {
+      var el = document.getElementById(scrollTo) || document.getElementById("main");
+      if (el && el.scrollIntoView) el.scrollIntoView({ block: "start" });
+    }
   }
 
   function bindMarks() {
@@ -98,6 +121,37 @@
         saveMarks(data);
         applyMarks();
       });
+    });
+  }
+
+  document.querySelectorAll(".tile[data-goto]").forEach(function (tile) {
+    tile.addEventListener("click", function () {
+      if (search) search.value = "";
+      query = "";
+      setTopic(tile.getAttribute("data-goto"));
+    });
+  });
+
+  document.querySelectorAll("#money-filter-wrap .pill[data-stage]").forEach(function (pill) {
+    pill.addEventListener("click", function () {
+      moneyStage = pill.getAttribute("data-stage");
+      apply();
+    });
+  });
+
+  document.querySelectorAll("#hidden-filter-wrap .pill[data-kind]").forEach(function (pill) {
+    pill.addEventListener("click", function () {
+      hiddenKind = pill.getAttribute("data-kind");
+      apply();
+    });
+  });
+
+  if (checkLink) {
+    checkLink.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      if (search) search.value = "";
+      query = "";
+      setTopic("check", "check-scope");
     });
   }
 
