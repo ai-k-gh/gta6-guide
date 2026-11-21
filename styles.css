@@ -679,3 +679,77 @@ details.spoiler {
   * { scroll-behavior: auto !important; }
   .dock { backdrop-filter: none; background: var(--navy); }
 }
+
+
+/* Chapter 1 start card and flow schematic */
+.start-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(120deg, rgba(98, 224, 230, 0.1), rgba(255, 140, 198, 0.1)),
+    var(--card);
+  border: 1px solid color-mix(in srgb, var(--cyan) 40%, var(--pink));
+  border-radius: var(--radius);
+  padding: 1rem 1rem 1.05rem;
+  margin: 0 0 0.85rem;
+  box-shadow: var(--shadow);
+}
+
+.start-card h2 {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.start-card p { margin: 0 0 0.65rem; }
+
+.start-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.start-card .btn-link { margin: 0; }
+
+.flow {
+  margin: 0.7rem 0 0.35rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(8, 12, 22, 0.45);
+  padding: 0.55rem 0.4rem 0.2rem;
+}
+
+.flow svg { display: block; width: 100%; height: auto; }
+
+.flow-caption, .schema-caption {
+  margin: 0.25rem 0 0.2rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.mission-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.mission-table th,
+.mission-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.45rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.mission-table th {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.mission-table td:first-child,
+.mission-table th:first-child { width: 2.1rem; color: var(--cyan); }

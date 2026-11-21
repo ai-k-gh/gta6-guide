@@ -7,7 +7,7 @@
   <meta name="description" content="以推出期媒體來源整理嘅《Grand Theft Auto VI》劇情模式搵錢、實用技巧同隱藏內容非官方指南。唔隸屬於 Rockstar Games。">
   <meta name="theme-color" content="#070a12">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261121c">
+  <link rel="stylesheet" href="styles.css?v=20261121d">
 </head>
 <body>
   <a class="skip" href="#main">跳去正文</a>
@@ -81,7 +81,7 @@
       <button type="button" class="tile" data-goto="money" aria-pressed="true">
         <span class="tile-kicker">Routes</span>
         <span class="tile-title">搵錢</span>
-        <span class="tile-desc">按章節進度嘅賺錢路線</span>
+        <span class="tile-desc">由第一章開始，按進度賺錢</span>
       </button>
       <button type="button" class="tile" data-goto="tips" aria-pressed="false">
         <span class="tile-kicker">Play</span>
@@ -113,6 +113,7 @@
       <div class="subfilters" id="money-filter-wrap">
         <span class="sr-only">進度篩選</span>
         <button type="button" class="pill" data-stage="all" aria-pressed="true">全部</button>
+        <button type="button" class="pill" data-stage="ch1" aria-pressed="false">第1章</button>
         <button type="button" class="pill" data-stage="ch2" aria-pressed="false">第2章</button>
         <button type="button" class="pill" data-stage="ch3" aria-pressed="false">第3章</button>
         <button type="button" class="pill" data-stage="mid" aria-pressed="false">前中期</button>
@@ -120,6 +121,7 @@
         <label class="sr-only" for="money-filter">進度篩選
           <select id="money-filter" tabindex="-1">
             <option value="all" selected>全部</option>
+            <option value="ch1">第1章</option>
             <option value="ch2">第2章</option>
             <option value="ch3">第3章</option>
             <option value="mid">前中期</option>
@@ -153,7 +155,16 @@
       <p>以下係今次讀過嘅推出期攻略整理，唔係親自實測。來源未逐項列明補丁版號；金額係遊戲內美元及外站報告，唔係保底淨利。只用正常玩法，冇 glitch、模組或 GTA Online 舊攻略。隱藏任務同彩蛋見「隱藏內容」。含地區、人物及工具解鎖輕微提示，冇結局劇透。本站唔隸屬於 Rockstar Games 或 Take-Two Interactive。</p>
     </details>
 
-    <p id="intro-money" class="lead">啱啱開始：先做教學、學識保錢；第2章用 Moses 補錢；第3章有工具後先考慮珠寶店及交車。未解鎖就唔好照後期路線硬做。</p>
+    <section id="start-ch1" class="start-card" aria-label="由第一章開始">
+      <p class="caption">第1章 · Just Like Paradise</p>
+      <h2>由第一章開始</h2>
+      <p>第一章主要喺 Key Lento。下面有開局流程、早期資源、可錯過差事同無回頭點前嘅準備。上一版只由第2章搵錢寫起，並唔係篩選把現成第一章隱藏咗。</p>
+      <div class="start-actions">
+        <a class="btn-link" id="goto-ch1" href="#chapter-1">先睇第一章攻略</a>
+      </div>
+    </section>
+
+    <p id="intro-money" class="lead">啱啱開始：先睇下面「由第一章開始」。第1章主要喺 Key Lento，仲未有第2章 Moses 收車或者第3章珠寶店。本章後段有無回頭點，開始前先睇準備清單。</p>
     <p id="intro-hidden" class="lead hidden">只收今次核到、有具體做法嘅隱藏內容。實用獎勵同純觀賞彩蛋分開寫；只得一篇原文嘅會標明「單一來源」。含位置或任務流程嘅段落預設收埋。冇結局劇透。</p>
     <p id="intro-map" class="lead hidden">以下係第三方繁體中文社群互動地圖嘅用法與限制。點位未逐一核對，要同遊戲內實況對過。</p>
 
@@ -171,6 +182,265 @@
     <p class="local-note">「標記」只會存在呢個瀏覽器（本機儲存），唔會同步遊戲存檔，亦唔會上傳到任何伺服器。</p>
 
     <p id="empty" hidden>冇符合而家篩選或搜尋嘅內容。試下清空搜尋，或者換一個主題。</p>
+
+
+    <!-- CHAPTER 1 -->
+    <article class="card section" id="chapter-1" data-topic="money" data-stage="ch1" data-search="第一章 第1章 just like paradise key lento 序章 prologue gone fishing 開局 流程 示意">
+      <div class="section-head">
+        <div>
+          <span class="caption">第1章</span>
+          <h2>第一章點樣開始、點樣推進</h2>
+        </div>
+        <button type="button" class="mark" data-mark="ch1-overview" aria-pressed="false">標記</button>
+      </div>
+      <dl class="props">
+        <div><dt>本章叫咩</dt><dd>外站普遍稱第一章為 Just Like Paradise。VGC 同 GamesRadar+ 將序章計入本章主線；PowerPyx 將 Prologue 單獨列出，再由 Gone Fishing 起計本章關卡。</dd></div>
+        <div><dt>你喺邊、玩邊個</dt><dd>大部分時間喺 Leonida Keys 嘅 Key Lento 一帶。開頭序章操作 Lucia，之後長時間操作 Jason；Lucia 出獄後先再一齊推進。</dd></div>
+        <div><dt>要幾耐</dt><dd>VGC 報淨跑主線大約 6–7 小時；連支線大約 10 小時。呢啲係外站估時，唔係保證。</dd></div>
+        <div><dt>重要限制</dt><dd>唔好假設第2章 Moses 收車、Pay ’n’ Spray 賣車或第3章珠寶店喺第一章已經解鎖。Polygon 亦寫開局幾個鐘內，偷車出售、快速旅行同大部分搶劫機會都仲未開放。</dd></div>
+      </dl>
+      <figure class="flow">
+        <svg viewBox="0 0 360 430" role="img" aria-labelledby="flow-title flow-desc">
+          <title id="flow-title">第一章推進階段示意</title>
+          <desc id="flow-desc">由序章到無回頭點前嘅六個階段，只係流程示意，唔係遊戲地圖。</desc>
+          <defs>
+            <linearGradient id="flowg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1a2438"/>
+              <stop offset="100%" stop-color="#141c2e"/>
+            </linearGradient>
+          </defs>
+          <rect width="360" height="430" fill="transparent"/>
+          <g font-family="system-ui, sans-serif" font-size="13" fill="#f6f1f4">
+            <rect x="28" y="10" width="304" height="52" rx="12" fill="url(#flowg)" stroke="#62e0e6"/>
+            <text x="180" y="32" text-anchor="middle" fill="#62e0e6" font-size="10" letter-spacing="1.4">1</text>
+            <text x="180" y="48" text-anchor="middle">序章：跟提示操作 Lucia</text>
+            <path d="M180 62 v14" stroke="#ff8cc6" stroke-width="2" fill="none"/>
+            <path d="M174 72 l6 8 6-8" fill="#ff8cc6"/>
+            <rect x="28" y="82" width="304" height="52" rx="12" fill="url(#flowg)" stroke="rgba(214,168,198,0.3)"/>
+            <text x="180" y="104" text-anchor="middle" fill="#ff8cc6" font-size="10" letter-spacing="1.4">2</text>
+            <text x="180" y="120" text-anchor="middle">Gone Fishing 後，Key Lento 可活動</text>
+            <path d="M180 134 v14" stroke="#ff8cc6" stroke-width="2" fill="none"/>
+            <path d="M174 144 l6 8 6-8" fill="#ff8cc6"/>
+            <rect x="28" y="154" width="304" height="52" rx="12" fill="url(#flowg)" stroke="rgba(214,168,198,0.3)"/>
+            <text x="180" y="176" text-anchor="middle" fill="#ff8cc6" font-size="10" letter-spacing="1.4">3</text>
+            <text x="180" y="192" text-anchor="middle">Brian 相關差事，順序可以唔同</text>
+            <path d="M180 206 v14" stroke="#ff8cc6" stroke-width="2" fill="none"/>
+            <path d="M174 216 l6 8 6-8" fill="#ff8cc6"/>
+            <rect x="28" y="226" width="304" height="52" rx="12" fill="url(#flowg)" stroke="rgba(214,168,198,0.3)"/>
+            <text x="180" y="248" text-anchor="middle" fill="#ff8cc6" font-size="10" letter-spacing="1.4">4</text>
+            <text x="180" y="264" text-anchor="middle">修屋、鄰居差事、迎接準備</text>
+            <path d="M180 278 v14" stroke="#ff8cc6" stroke-width="2" fill="none"/>
+            <path d="M174 288 l6 8 6-8" fill="#ff8cc6"/>
+            <rect x="28" y="298" width="304" height="52" rx="12" fill="url(#flowg)" stroke="rgba(214,168,198,0.3)"/>
+            <text x="180" y="320" text-anchor="middle" fill="#ff8cc6" font-size="10" letter-spacing="1.4">5</text>
+            <text x="180" y="336" text-anchor="middle">接 Lucia，之後先開銀行戶口</text>
+            <path d="M180 350 v14" stroke="#ff8cc6" stroke-width="2" fill="none"/>
+            <path d="M174 360 l6 8 6-8" fill="#ff8cc6"/>
+            <rect x="28" y="370" width="304" height="52" rx="12" fill="url(#flowg)" stroke="#ff9b6a"/>
+            <text x="180" y="392" text-anchor="middle" fill="#ff9b6a" font-size="10" letter-spacing="1.4">6</text>
+            <text x="180" y="408" text-anchor="middle">無回頭點前：先存檔同處理錢</text>
+          </g>
+        </svg>
+        <p class="flow-caption">示意，非遊戲地圖／非比例。階段根據 GamesRadar+、PowerPyx 同 VGC 嘅本章結構整理，唔代表固定座標或唯一路線。</p>
+      </figure>
+      <details class="guide-more">
+        <summary>做法同來源</summary>
+        <p>地圖用粉紅主線圖示同 Story 清單睇而家有咩任務；PowerPyx 寫任務喺地圖上嘅起始名稱，有時同開始後先出現嘅正式關名唔同。可用電話訊息找到委託人。若任務未出現，試做其他關或者瞓覺等時間。</p>
+        <p>有圖解嘅原文請直接開來源頁，本頁冇複製外站遊戲截圖或地圖。社群互動地圖仍用總入口，今次未找到已記錄、可核實嘅「第1章專用」深層連結，所以冇自製參數。</p>
+        <ul class="links">
+          <li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-chapter-1-walkthrough/" target="_blank" rel="noopener noreferrer">GamesRadar+：Chapter 1 walkthrough（有關卡圖）</a></li>
+          <li><a href="https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/" target="_blank" rel="noopener noreferrer">PowerPyx：全主線／可選任務總表</a></li>
+          <li><a href="https://www.videogameschronicle.com/guide/gta-6-chapter-1-just-like-paradise-guide-how-many-missions-are-in-gta-6-chapter-1/" target="_blank" rel="noopener noreferrer">VGC：第一章關數同需時</a></li>
+          <li><a href="https://www.polygon.com/gta-6-what-to-do-first-how-to-get-started/" target="_blank" rel="noopener noreferrer">Polygon：開局先做咩（有圖解）</a></li>
+        </ul>
+      </details>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="ch1" data-search="gone fishing gear up just a scratch lab fees pipework unwanted attention 序章 步驟 brian cal donnie">
+      <div class="section-head">
+        <div>
+          <span class="caption">第1章</span>
+          <h2>序章之後，實際點行</h2>
+        </div>
+        <button type="button" class="mark" data-mark="ch1-steps" aria-pressed="false">標記</button>
+      </div>
+      <ol class="steps">
+        <li><h3>序章跟提示走</h3><p>開頭以 Lucia 視角完成教學式序章。Polygon 建議序章後立刻另存一個手動檔，之後若重開就唔使再睇一次開場。</p></li>
+        <li><h3>Gone Fishing：Jason 第一個開放活動關</h3><p>PowerPyx 寫呢關喺序章後即時開始：開船跟住 Donnie 嘅飛機，靠近浮包就減速等 Cal 撈起，跟粉紅路線入沼澤。上岸後可用潛行接近營地救 Donnie，再駕水上飛機返 Brian 嘅碼頭。完成後會得到 Key Lento 嘅住處。</p></li>
+        <li><h3>之後幾件 Brian 差事可以唔按同一順序</h3><p>GamesRadar+ 同 PowerPyx 都列出買長槍（地圖目標常寫 Pick Up Another Gun）、修 Jason 部 Ganado（Joey 嘅改裝店）、代收租、同 Cal 處理一部被扣車輛等。幾關可以一齊出現，順序因存檔而異。跟地圖 Story 清單做即可，唔使硬套第2章工具。</p></li>
+        <li><h3>唔好急住把主線推到後段</h3><p>GameSpot 建議趁住仲喺 Key Lento，先探索主街、酒吧同出現緊嘅支線；之後由其他地區駛返 Keys，單程可能要十數分鐘。接 Lucia 之前，值得先做修屋同可選準備。</p></li>
+      </ol>
+      <details class="guide-more">
+        <summary>做法同來源</summary>
+        <p>Gone Fishing 實用細節（PowerPyx）：武器輪盤可攞望遠鏡觀察；可用望遠鏡研究動物，進度之後先算入 100%。營地可用背後制伏。路上左邊紅白拖車有一筆可選現金，Donnie 會出聲提示，屬可錯過拾取。治療用 Zombix，便利店有得買，最多同時帶 5 支。</p>
+        <p>Just a Scratch：GamesRadar+ 寫把狀況唔好嘅車開去 Joey 嘅店整。Lab Fees 係去 Moonstone Boutique 代 Brian 收租。Unwanted Attention 地圖目標常寫 Go See Cal。Pipework 係向租客 Mandy 收租並按提示修理。</p>
+        <ul class="links">
+          <li><a href="https://www.powerpyx.com/gta-6-gone-fishing-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Gone Fishing（有關卡截圖）</a></li>
+          <li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-chapter-1-walkthrough/" target="_blank" rel="noopener noreferrer">GamesRadar+：第一章關卡清單同分頁攻略</a></li>
+        </ul>
+      </details>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="ch1" data-search="早期搵錢 地板 藏金 buckme family savings 抑制器 可卡因 包裹 lost drugs 資源">
+      <div class="section-head">
+        <div>
+          <span class="caption">第1章</span>
+          <h2>早期錢同資源：唔好套用第2章</h2>
+        </div>
+        <button type="button" class="mark" data-mark="ch1-money" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>先守住身上嘅錢</h3>
+          <p>Polygon 寫開局錢緊，有收入就放入 Jason 睡房地板夾層，死亡唔會連藏低嘅錢一齊冇。身上唔好袋晒去亂花，因為稍後有任務目標要你存錢、買花等。GameSpot 就勸唔好為咗「盡賺」而瘋狂刷早期毒品，因為故事前段有機會令戶口或現金變少；賺到嘅錢應用嚟應付即時武器或改裝，而唔係當成長期本金。</p>
+        </div>
+        <div>
+          <h3>銀行戶口唔係一開始就有</h3>
+          <p>PowerPyx 同 GamesRadar+ 都將 Buck Me（去附近 Fleeca 開 BuckMe 戶口）放喺 Coming Home 之後。開戶之前，地板儲藏先係過渡方案。開戶後先可以用 app 存款，並將部分轉入 Family Savings。</p>
+        </div>
+        <div>
+          <h3>本章中段先有一條可賣貨路線</h3>
+          <p>PowerPyx 寫可選任務 Find the Lost Drugs 會喺 Down to Earth 之後以電話觸發：沼澤有四個搜尋範圍，包裹會響同閃黃燈，拾到後可交俾銷贓人 Brian 或 Donnie。外站冇俾到本頁敢寫成固定單件美金嘅一致數字，賣得幾多以遊戲內報價為準。唔好帶住袋死亡。</p>
+        </div>
+        <div>
+          <h3>早期裝備，唔係後期生意</h3>
+          <p>GameSpot 寫 Key Lento 完成教學後就有槍店，抑制器唔貴，早買有助靜音交戰。Gear Up 本身係去標記槍店買長槍。第2章先有 Moses 收車，第3章先有 Pay ’n’ Spray 賣車同珠寶店後門，呢度重複一次以免照後期攻略硬做。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.polygon.com/gta-6-what-to-do-first-how-to-get-started/" target="_blank" rel="noopener noreferrer">Polygon：開局理財同地板藏金圖解</a></li>
+        <li><a href="https://www.gamespot.com/articles/5-best-things-to-do-first-in-gta-6/" target="_blank" rel="noopener noreferrer">GameSpot：開局先做嘅五件事</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-find-the-lost-drugs-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Find the Lost Drugs（有搜尋範圍截圖）</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="ch1" data-search="修屋 屋頂 欄杆 牆壁 樓梯 focus 蛇 籃球 lucia 花 項鍊 頭髮 衣服 雜貨 polygon">
+      <div class="section-head">
+        <div>
+          <span class="caption">第1章</span>
+          <h2>修屋、Focus，同迎接 Lucia</h2>
+        </div>
+        <button type="button" class="mark" data-mark="ch1-house" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>屋子有四個修理點</h3>
+          <p>Polygon 同 PowerPyx 都寫，知道 Lucia 快出獄之後，可以修理 Jason 屋：前門樓梯附近嘅木板（唔係近水嗰邊）、前門廊東側梯子上屋頂、面向水面健身區欄杆缺口，以及睡房床尾破損牆再上漆。地圖標記只罩住成座屋，所以要逐處搵。Polygon 寫呢啲修理冇工資，但 Lucia 返嚟會睇到。</p>
+        </div>
+        <div>
+          <h3>開局就養成 Focus</h3>
+          <p>Polygon 寫餵客廳近廚房嘅寵物蛇，每日一次大約加 3% Focus；屋企樓下籃框入波每次約 2%，最多連續五次，之後要等重置。建議趁住仲住呢度先做。</p>
+        </div>
+        <div>
+          <h3>接機前嘅可選差事</h3>
+          <p>PowerPyx 列出五項可選：買日用品並送達、買花、買項鍊、剪頭髮（Get The Chop）、去朋友 Andy 處取 Lucia 衣服。佢哋會提升關係。項鍊價外站唔一致：PowerPyx Coming Home 頁寫 $425，其他轉述有唔同數字，以店內標價為準。PowerPyx 認為項鍊之後第2章仍然有用。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.polygon.com/gta-6-grand-theft-auto-how-to-repair-jasons-house/" target="_blank" rel="noopener noreferrer">Polygon：修屋四點位置圖解</a></li>
+        <li><a href="https://www.polygon.com/gta-6-what-to-do-first-how-to-get-started/" target="_blank" rel="noopener noreferrer">Polygon：餵蛇同籃球圖解</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-coming-home-lucias-release-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Coming Home 同可選準備</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="ch1" data-search="shirley 朗姆 rum scooter 可錯過 missable 滑板車 three sheets 鄰居 丟失毒品 kirk kenton">
+      <div class="section-head">
+        <div>
+          <span class="caption">第1章</span>
+          <h2>可錯過、但值得趁早做</h2>
+        </div>
+        <button type="button" class="mark" data-mark="ch1-missable" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>鄰居 Shirley 兩段打雜</h3>
+          <p>PowerPyx 同 Push Square 都將 Get Shirley’s Rum、Steal the Scooter 列為第一章限定，開始本章後段無回頭點任務後就會消失。兩段都唔計 Strangers &amp; Freaks 獎杯，亦唔係 100% 必需。想做就喺離開本章自由活動之前做完。</p>
+        </div>
+        <div>
+          <h3>可以遲啲再續嘅線</h3>
+          <p>Kirk 臭鼬猿可喺第一章開始，但 PowerPyx 寫要到第2章先完成。Kenton 潛水尋寶同 Cal 釣魚，PowerPyx 指本章後段會暫時唔見，之後圖示再出現仍可續。呢啲唔好同 Shirley 嗰啲「過章就冇」混為一談。</p>
+        </div>
+      </div>
+      <details class="spoiler">
+        <summary>Shirley 同其他可選做法（預設收埋）</summary>
+        <p>PowerPyx：做完 Gear Up、Lab Fees、Just a Scratch、Unwanted Attention 之後，去 Pipework 途中 Shirley 會叫你。同意後，地圖會標 Key Lento 南面 Three Sheets Liquor；用瞄準查看店員再按提示問朗姆酒，拿返俾佢。你亦可以問後面嘅雀鳥聲，商店後會標一個非法經營點，PowerPyx 寫可以遲啲先做。</p>
+        <p>Push Square 補充另一個觸發：做完 Unwanted Attention 返屋企時， Shirley 可能已經喺門外叫你。第二段 Steal the Scooter 通常要再過一日左右；PowerPyx 寫Peggy 部代步車停喺對面水屋企樓梯旁車路，騎返 Shirley 屋企並駛入走廊／門廊先算完成。Push Square 有地圖截圖，請直接睇原文。</p>
+        <p>另外，PowerPyx 寫 Gone Fishing 營地紅白拖車有一筆可選現金，屬可錯過拾取。Find the Lost Drugs 四個範圍由南至北大概係休憩區、燒毀房屋、Pelican Valley、Thorpe Adventures；最北嗰區有時要喺 Shed 內搵已經拆開嘅貨，而唔係完整包裹。</p>
+      </details>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-get-shirleys-rum-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Get Shirley’s Rum（有地圖截圖）</a></li>
+        <li><a href="https://www.pushsquare.com/guides/gta-6-get-shirleys-rum-walkthrough" target="_blank" rel="noopener noreferrer">Push Square：Get Shirley’s Rum 地圖圖解</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-steal-the-scooter-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Steal the Scooter</a></li>
+        <li><a href="https://www.pushsquare.com/guides/gta-6-steal-the-scooter-walkthrough" target="_blank" rel="noopener noreferrer">Push Square：Steal the Scooter 圖解</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="ch1" data-search="無回頭點 tourist trap recalibration family savings 5000 存檔 準備 本章結束 mattia">
+      <div class="section-head">
+        <div>
+          <span class="caption">第1章</span>
+          <h2>無回頭點：開始前先做嘅準備</h2>
+        </div>
+        <button type="button" class="mark" data-mark="ch1-por" aria-pressed="false">標記</button>
+      </div>
+      <p>VGC、PowerPyx 同 GamesRadar+ 都指出，第一章後段有一個無回頭點。地圖上呢關開始時常寫成 Take Up Mattia’s Offer，開始後會連續做完本章最後幾關，期間冇自由探索，直至第2章。唔急住開。想繼續喺 Key Lento 逛，就喺開始呢條線之前停低。</p>
+      <p>PowerPyx 寫呢關會喺 Recalibration 之後自動接上，所以實際準備同手動存檔，最好喺開始 Recalibration 之前做完。</p>
+      <details class="spoiler">
+        <summary>外站列明嘅後果同準備清單（預設收埋，唔講劇情轉折）</summary>
+        <p>開始前另開一個之後唔好覆蓋嘅手動檔。PowerPyx 建議 Family Savings 至少放入 $5,000；帶入呢關嘅隨身現金會冇，Key Lento 住處亦寫成之後收回唔到。GTABase 進一步寫支票戶同地板藏金都唔會跟去第2章，跟得走嘅主要係 Family Savings。呢啲係外站報告，以你存檔實況為準。</p>
+        <p>VGC 用較少劇情嘅寫法補充：呢條連續任務開始後，有幾個鐘喺第2章唔能夠用平常方式自由控制兩位主角到處行；Ultimate Edition 附帶、屬於 Jason 嘅載具亦可能暫時用唔到。第2章進行幾個鐘後可以返 Key Lento，但活動範圍已經離開局區好遠，唔好當即刻返到。</p>
+        <p>PowerPyx 寫 Kenton 潛水、同 Cal 釣魚、以及黃色 Kingfishers 據點圖示稍後仍會再出現，唔使為咗佢哋先趕過呢個點；相反 Shirley 呢類第一章限定差事就要先做完。剩餘現金若唔會進入 Family Savings，可用嚟買即時用得著嘅裝備，而唔好假設袋住就跟到下一章。</p>
+      </details>
+      <ul class="links">
+        <li><a href="https://www.videogameschronicle.com/guide/gta-6-chapter-1-warning-read-this-before-finishing-chapter-1-of-gta-6/" target="_blank" rel="noopener noreferrer">VGC：第一章無回頭點（較少劇情）</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-tourist-trap-take-up-mattias-offer-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：無回頭點警告同準備</a></li>
+        <li><a href="https://www.gtabase.com/gta-6/articles/how-to-keep-your-money-safe-in-gta-6" target="_blank" rel="noopener noreferrer">GTABase：BuckMe 同 Family Savings</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="ch1" data-search="任務表 順序 prologue coming home island dreams feng shui 關卡名 22">
+      <div class="section-head">
+        <div>
+          <span class="caption">第1章</span>
+          <h2>主線名稱一覽（預設收埋）</h2>
+        </div>
+        <button type="button" class="mark" data-mark="ch1-list" aria-pressed="false">標記</button>
+      </div>
+      <p>以下關名主要跟 GamesRadar+ 清單，並用 PowerPyx 總表核對。計法有出入：VGC 報本章 22 個主線；PowerPyx 把序章分開，又把存款目標、組傢俬等寫成獨立項目，所以編號唔好當官方唯一編號。</p>
+      <details class="spoiler">
+        <summary>顯示任務名稱同短目標（含主線關名）</summary>
+        <table class="mission-table">
+          <thead><tr><th>#</th><th>關名（開始後常見名稱）</th><th>短目標／備註</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Prologue</td><td>跟提示完成 Lucia 序章。</td></tr>
+            <tr><td>2</td><td>Gone Fishing</td><td>幫 Donnie 收水上包裹，再救人返碼頭。</td></tr>
+            <tr><td>3</td><td>Gear Up</td><td>地圖常寫 Pick Up Another Gun，去標記槍店買長槍。之後幾關或可並行。</td></tr>
+            <tr><td>4</td><td>Just a Scratch</td><td>Fix Your Car：去 Joey 店整 Ganado。</td></tr>
+            <tr><td>5</td><td>Lab Fees</td><td>Collect Brian’s Rent：Moonstone Boutique。</td></tr>
+            <tr><td>6</td><td>Unwanted Attention</td><td>Go See Cal，跟指示處理被扣車輛。</td></tr>
+            <tr><td>7</td><td>Pipework</td><td>Collect Mandy’s Rent，並按提示修理。</td></tr>
+            <tr><td>8</td><td>Hey Arnold!</td><td>Meet Brian：Crastenburg Hotel。呢關有選擇，本頁唔寫結果。</td></tr>
+            <tr><td>9</td><td>Island Dreams</td><td>Work for Kenton：潛水尋寶教學。</td></tr>
+            <tr><td>10</td><td>Feng Shui</td><td>Meet Cal：整理客廳迎接 Lucia。</td></tr>
+            <tr><td>11</td><td>Coming Home</td><td>Lucia’s Release：去 Hamlet Correctional 接人。</td></tr>
+            <tr><td>12</td><td>Clean Up After Donnie</td><td>Donnie’s Drop：跟訊號搵失落包裹。同 Buck Me 嘅先後，外站清單略有出入。</td></tr>
+            <tr><td>13</td><td>Buck Me</td><td>Set Up Bank Account：同 Lucia 去 Fleeca 開戶。</td></tr>
+            <tr><td>14</td><td>Down to Earth</td><td>Meet Brian：碼頭工作。</td></tr>
+            <tr><td>15</td><td>Clear Skies</td><td>Join Donnie On A Job：GamesRadar+ 寫要去 Southwind 會合。</td></tr>
+            <tr><td>16</td><td>Building a Life</td><td>PowerPyx／GamesRadar+ 都單列：同 Lucia 組傢俬等生活目標。</td></tr>
+            <tr><td>17</td><td>Day Release</td><td>Meet Mattia &amp; Kat：Rusty Anchor 一帶。</td></tr>
+            <tr><td>18</td><td>Swamped</td><td>Meet Brian：碼頭。</td></tr>
+            <tr><td>19</td><td>Don Gone</td><td>Head to Donnie’s Trailer。</td></tr>
+            <tr><td>20</td><td>Recalibration</td><td>Talk to Lucia／GamesRadar+ 寫去陪 Cal。之後或會自動接無回頭點關。</td></tr>
+            <tr><td>21–23</td><td>Tourist Trap、Home Sweet Home、Discharge Time</td><td>連續進行，中間冇自由探索。本頁唔寫呢三關劇情同結局。</td></tr>
+          </tbody>
+        </table>
+      </details>
+      <ul class="links">
+        <li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-chapter-1-walkthrough/" target="_blank" rel="noopener noreferrer">GamesRadar+：第一章任務表</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/" target="_blank" rel="noopener noreferrer">PowerPyx：全任務總表（含可選）</a></li>
+      </ul>
+    </article>
 
     <!-- MONEY -->
     <article class="card section" data-topic="money" data-stage="ch2" data-search="moses 收車 第2章 slim jim waink port gellhorn 生活費">
@@ -702,15 +972,27 @@
     </article>
 
     <!-- CHECK -->
-    <article class="card section" id="check-scope" data-topic="check" data-search="查證 限制 落差 金庫 扣車 moses 舊作 地圖書籤">
+    <article class="card section" id="check-scope" data-topic="check" data-search="查證 限制 落差 金庫 扣車 moses 舊作 地圖書籤 第一章 缺漏">
       <div class="section-head">
         <div><h2>查證範圍同刻意唔寫嘅內容</h2></div>
         <button type="button" class="mark" data-mark="check-scope" aria-pressed="false">標記</button>
       </div>
-      <p>已讀 PowerPyx、GameSpot、PC Gamer、Polygon、GamesRadar+、Guardian 及 IGN 本次可取得嘅推出期原文。核心賣車／珠寶做法有跨媒體對照；金額及部分隱藏細節仍可能只由其中一篇報告。冇親自操作遊戲，唔會寫成「實測必賺」。</p>
+      <p>已讀 PowerPyx、GameSpot、PC Gamer、Polygon、GamesRadar+、Guardian、VGC、Push Square、GTABase 及 IGN 本次可取得嘅推出期原文。第一章流程於 2026年11月21日（香港時間）補入並交叉核對。核心賣車／珠寶做法同本章開局步驟有跨媒體對照；金額及部分隱藏細節仍可能只由其中一篇報告。冇親自操作遊戲，唔會寫成「實測必賺」。</p>
       <details class="guide-more">
         <summary>做法同來源</summary>
       <div class="rows">
+        <div>
+          <h3>第一章原本係內容缺漏，唔係篩選故障</h3>
+          <p>第一版跟當時搵錢攻略由第2章 Moses 寫起，篩選亦只有第2章起。原始 HTML 冇 data-stage="ch1" 卡片，所以唔係程式把第一章隱藏。本次先加第1章篩選同開局流程。</p>
+        </div>
+        <div>
+          <h3>第一章關卡編號有落差</h3>
+          <p>VGC 報 22 個主線；PowerPyx 將序章分開，並把存款、組傢俬等寫成獨立項。Gone Fishing 之後幾關可並行，清單順序唔等於你必須跟嘅唯一順序。Coming Home 之後 Buck Me 同 Clean Up After Donnie 嘅先後，外站總表略有出入，以遊戲內 Story 清單為準。</p>
+        </div>
+        <div>
+          <h3>項鍊標價同早期賺錢建議有落差</h3>
+          <p>PowerPyx 寫迎 Lucia 嘅項鍊約 $425，其他轉述數字唔同，以店內為準。GameSpot 勸早期唔好狂刷錢，PowerPyx／GTABase 則強調無回頭點前先注入 Family Savings；兩者並存：即時開支同可帶走嘅儲蓄要分開計。</p>
+        </div>
         <div>
           <h3>Moses 金額有落差</h3>
           <p>GameSpot 提到特定合約可上萬；PowerPyx／PC Gamer 一般收車約千幾起。頁面分清一般售車，唔套上合約高價。</p>
@@ -766,6 +1048,19 @@
         <li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-bigfoot-location-skunk-ape/" target="_blank" rel="noopener noreferrer">PC Gamer：Skunk Ape Sighting</a></li>
         <li><a href="https://www.polygon.com/gta-6-skunk-ape-tree-effigies-locations-where-to-find/" target="_blank" rel="noopener noreferrer">Polygon：Tree Effigies</a></li>
         <li><a href="https://es.ign.com/grand-theft-auto-vi/235763/el-mejor-rifle-de-francotirador-de-gta-6-esta-escondido-en-una-mision-que-es-facil-pasar-por-alto" target="_blank" rel="noopener noreferrer">IGN：FF50 Event</a></li>
+        <li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-chapter-1-walkthrough/" target="_blank" rel="noopener noreferrer">GamesRadar+：Chapter 1 Walkthrough</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/" target="_blank" rel="noopener noreferrer">PowerPyx：Full Walkthrough</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-gone-fishing-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Gone Fishing</a></li>
+        <li><a href="https://www.polygon.com/gta-6-what-to-do-first-how-to-get-started/" target="_blank" rel="noopener noreferrer">Polygon：What to Do First</a></li>
+        <li><a href="https://www.polygon.com/gta-6-grand-theft-auto-how-to-repair-jasons-house/" target="_blank" rel="noopener noreferrer">Polygon：Repair the House</a></li>
+        <li><a href="https://www.gamespot.com/articles/5-best-things-to-do-first-in-gta-6/" target="_blank" rel="noopener noreferrer">GameSpot：5 Best Things To Do First</a></li>
+        <li><a href="https://www.videogameschronicle.com/guide/gta-6-chapter-1-just-like-paradise-guide-how-many-missions-are-in-gta-6-chapter-1/" target="_blank" rel="noopener noreferrer">VGC：Chapter 1 Length</a></li>
+        <li><a href="https://www.videogameschronicle.com/guide/gta-6-chapter-1-warning-read-this-before-finishing-chapter-1-of-gta-6/" target="_blank" rel="noopener noreferrer">VGC：Chapter 1 Warning</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-get-shirleys-rum-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Shirley’s Rum</a></li>
+        <li><a href="https://www.pushsquare.com/guides/gta-6-get-shirleys-rum-walkthrough" target="_blank" rel="noopener noreferrer">Push Square：Shirley’s Rum</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-find-the-lost-drugs-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Lost Drugs</a></li>
+        <li><a href="https://www.gtabase.com/gta-6/articles/how-to-keep-your-money-safe-in-gta-6" target="_blank" rel="noopener noreferrer">GTABase：Family Savings</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-tourist-trap-take-up-mattias-offer-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Point of No Return Warning</a></li>
         <li><a href="https://oplay.cc/gta6/map" target="_blank" rel="noopener noreferrer">揪團開黑：GTA 6 互動地圖</a></li>
       </ul>
       </details>
@@ -774,9 +1069,9 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>非官方指南。攻略正文依據 2026年11月20日（香港時間）核對嘅推出期媒體整理；互動地圖書籤於 2026年11月21日（香港時間）加入。本站唔隸屬於 Rockstar Games 或 Take-Two Interactive。《Grand Theft Auto》及相關名稱屬於其權利人。互動地圖係第三方書籤，進度唔會同步到呢頁。補丁、存檔進度、外站點位及操作設定可能改變。</p>
+      <p>非官方指南。搵錢同技巧正文依據 2026年11月20日（香港時間）核對嘅推出期媒體；第一章流程同圖解來源連結於 2026年11月21日（香港時間）補入。互動地圖仍係第三方書籤。本站唔隸屬於 Rockstar Games 或 Take-Two Interactive。《Grand Theft Auto》及相關名稱屬於其權利人。互動地圖係第三方書籤，進度唔會同步到呢頁。補丁、存檔進度、外站點位及操作設定可能改變。</p>
     </div>
   </footer>
-  <script src="app.js?v=20261121c" defer></script>
+  <script src="app.js?v=20261121d" defer></script>
 </body>
 </html>

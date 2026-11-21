@@ -18,6 +18,8 @@
   var introHidden = document.getElementById("intro-hidden");
   var introMap = document.getElementById("intro-map");
   var checkLink = document.getElementById("check-link");
+  var startCh1 = document.getElementById("start-ch1");
+  var gotoCh1 = document.getElementById("goto-ch1");
 
   function marks() {
     try {
@@ -99,7 +101,31 @@
     if (moneyFilterWrap) moneyFilterWrap.hidden = topic !== "money";
     if (hiddenFilterWrap) hiddenFilterWrap.hidden = topic !== "hidden";
     if (empty) empty.hidden = shown > 0;
+    if (startCh1) startCh1.classList.toggle("hidden", !(topic === "money" && !q));
     syncChrome();
+  }
+
+  function goChapter1() {
+    topic = "money";
+    moneyStage = "ch1";
+    query = "";
+    if (search) search.value = "";
+    apply();
+    if (history.replaceState) {
+      history.replaceState(null, "", "#chapter-1");
+    } else {
+      location.hash = "chapter-1";
+    }
+    var el = document.getElementById("chapter-1");
+    if (el && el.scrollIntoView) el.scrollIntoView({ block: "start" });
+  }
+
+  function applyHash() {
+    var hash = (location.hash || "").replace(/^#/, "");
+    var params = "";
+    try { params = new URLSearchParams(location.search || ""); } catch (e) { params = null; }
+    var want = hash === "chapter-1" || (params && params.get("stage") === "ch1");
+    if (want) goChapter1();
   }
 
   function setTopic(next, scrollTo) {
@@ -180,7 +206,19 @@
     });
   }
 
+  if (gotoCh1) {
+    gotoCh1.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      goChapter1();
+    });
+  }
+
+  window.addEventListener("hashchange", function () {
+    if ((location.hash || "").replace(/^#/, "") === "chapter-1") goChapter1();
+  });
+
   bindMarks();
   applyMarks();
   apply();
+  applyHash();
 })();

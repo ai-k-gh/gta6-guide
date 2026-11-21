@@ -107,7 +107,7 @@ def main():
             )
             assert_true(spoilers_open == 0, f"spoilers should start closed, open={spoilers_open}")
 
-            map_href = page.get_attribute("a.btn-link", "href")
+            map_href = page.get_attribute("a.btn-map", "href")
             assert_true(
                 map_href == "https://oplay.cc/gta6/map",
                 f"map link should be external, got {map_href}",
@@ -116,7 +116,24 @@ def main():
             visible_money = page.evaluate(
                 "() => document.querySelectorAll('article[data-topic=\"money\"]:not(.hidden)').length"
             )
-            assert_true(visible_money == 6, f"default money articles expected 6, got {visible_money}")
+            assert_true(visible_money == 13, f"default money articles expected 13, got {visible_money}")
+
+            ch1_pill = page.locator('#money-filter-wrap .pill[data-stage="ch1"]')
+            assert_true(ch1_pill.count() == 1, "chapter 1 money filter pill missing")
+            page.click("#goto-ch1")
+            ch1_only = page.evaluate(
+                "() => [...document.querySelectorAll('article[data-topic=\"money\"]:not(.hidden)')].map(e => e.getAttribute('data-stage'))"
+            )
+            assert_true(len(ch1_only) == 7 and all(s == "ch1" for s in ch1_only), f"ch1 filter via start button failed: {ch1_only}")
+            start_visible = page.evaluate("() => { const el = document.getElementById('start-ch1'); return !!(el && !el.classList.contains('hidden')); }")
+            assert_true(start_visible, "start card should stay visible on chapter 1 filter")
+            # deep link
+            page.goto(url + "#chapter-1", wait_until="networkidle")
+            ch1_hash = page.evaluate(
+                "() => [...document.querySelectorAll('article[data-topic=\"money\"]:not(.hidden)')].map(e => e.getAttribute('data-stage'))"
+            )
+            assert_true(len(ch1_hash) == 7 and all(s == "ch1" for s in ch1_hash), f"hash deep link failed: {ch1_hash}")
+            page.select_option("#money-filter", "all")
 
             hidden_wrap_vis = page.evaluate(
                 "() => { const el = document.getElementById('hidden-filter-wrap'); return !!(el && !el.hidden && getComputedStyle(el).display !== 'none'); }"
@@ -208,6 +225,15 @@ def main():
             assert_true(ch2 == 1, f"ch2 filter expected 1, got {ch2}")
 
             page.select_option("#money-filter", "all")
+            page.fill("#search", "第一章")
+            ch1search = page.evaluate(
+                "() => [...document.querySelectorAll('article.card:not(.hidden)')].some(e => (e.getAttribute('data-stage')||'')==='ch1' || (e.querySelector('h2')||{}).textContent.includes('第一'))"
+            )
+            assert_true(ch1search, "search for 第一章 failed")
+            page.fill("#search", "")
+            page.select_option("#topic", "money")
+            page.select_option("#money-filter", "all")
+
             page.fill("#search", "珠寶")
             jewels = page.evaluate(
                 "() => [...document.querySelectorAll('article.card:not(.hidden)')].map(e => e.querySelector('h2')?.textContent)"
