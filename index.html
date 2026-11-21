@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTA VI 非官方搵錢與實用技巧</title>
+  <meta name="description" content="以推出期媒體來源整理嘅《Grand Theft Auto VI》劇情模式搵錢、實用技巧同隱藏內容非官方指南。唔隸屬於 Rockstar Games。">
+  <meta name="theme-color" content="#13151a">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳去正文</a>
+  <header class="site-header">
+    <div class="masthead">
+      <p class="kicker">非官方指南 · 劇情模式</p>
+      <h1>GTA VI 搵錢與實用技巧</h1>
+      <p class="meta">PS5／Xbox Series X|S · 來源核對：2026年11月20日（香港時間） · 地圖資源附錄：2026年11月21日（香港時間）</p>
+    </div>
+    <div class="controls">
+      <label class="field" for="search">搜尋攻略正文
+        <input type="search" id="search" name="q" placeholder="例如：珠寶、金庫、火烈鳥" autocomplete="off" enterkeyhint="search">
+      </label>
+      <label class="field" for="topic">主題
+        <select id="topic">
+          <option value="money" selected>搵錢</option>
+          <option value="tips">實用技巧</option>
+          <option value="hidden">隱藏內容</option>
+          <option value="map">地圖資源</option>
+          <option value="check">查證與限制</option>
+        </select>
+      </label>
+      <div class="chips-wrap">
+        <label class="field" id="money-filter-wrap" for="money-filter">進度篩選
+          <select id="money-filter">
+            <option value="all" selected>全部</option>
+            <option value="ch2">第2章</option>
+            <option value="ch3">第3章</option>
+            <option value="mid">前中期</option>
+            <option value="late">後期</option>
+          </select>
+        </label>
+        <label class="field" id="hidden-filter-wrap" hidden for="hidden-filter">隱藏篩選
+          <select id="hidden-filter">
+            <option value="all" selected>全部</option>
+            <option value="mission">隱藏任務</option>
+            <option value="weapon">隱藏武器</option>
+            <option value="collect">收集品</option>
+            <option value="egg">觀賞彩蛋</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <aside class="callout">
+      <strong>有來源支持，唔等於逐個存檔包成功</strong>
+      <p>以下係今次讀過嘅推出期攻略整理，唔係親自實測。來源未逐項列明補丁版號；金額係遊戲內美元及外站報告，唔係保底淨利。只用正常玩法，冇 glitch、模組或 GTA Online 舊攻略。隱藏任務同彩蛋見「隱藏內容」。含地區、人物及工具解鎖輕微提示，冇結局劇透。本站唔隸屬於 Rockstar Games 或 Take-Two Interactive。</p>
+    </aside>
+
+    <p class="local-note">「標記」只會存在呢個瀏覽器（本機儲存），唔會同步遊戲存檔，亦唔會上傳到任何伺服器。</p>
+
+    <p id="intro-money">啱啱開始：先做教學、學識保錢；第2章用 Moses 補錢；第3章有工具後先考慮珠寶店及交車。未解鎖就唔好照後期路線硬做。</p>
+    <p id="intro-hidden" class="hidden">只收今次核到、有具體做法嘅隱藏內容。實用獎勵同純觀賞彩蛋分開寫；只得一篇原文嘅會標明「單一來源」。含位置或任務流程嘅段落預設收埋。冇結局劇透。</p>
+    <p id="intro-map" class="hidden">以下係第三方繁體中文社群互動地圖嘅用法與限制。點位未逐一核對，要同遊戲內實況對過。</p>
+
+    <section id="map-shortcut" class="map-card" aria-label="外部互動地圖">
+      <h2>外部互動地圖</h2>
+      <p>若想手機邊玩邊查點，可用揪團開黑嘅繁體中文社群互動地圖。呢個係第三方網站，唔係 Rockstar 官方地圖服務；點位同底圖都要同遊戲裏面核對。網站進度唔會自動同步到呢頁攻略。更詳細用法見主題裏嘅「地圖資源」。</p>
+      <a class="btn-link" href="https://oplay.cc/gta6/map" target="_blank" rel="noopener noreferrer">開啟 GTA 6 互動地圖</a>
+    </section>
+
+    <p id="empty" hidden>冇符合而家篩選或搜尋嘅內容。試下清空搜尋，或者換一個主題。</p>
+
+    <!-- MONEY -->
+    <article class="card section" data-topic="money" data-stage="ch2" data-search="moses 收車 第2章 slim jim waink port gellhorn 生活費">
+      <div class="section-head">
+        <div>
+          <span class="caption">第2章</span>
+          <h2>Moses 收車：前期補生活費</h2>
+        </div>
+        <button type="button" class="mark" data-mark="money-moses" aria-pressed="false">標記</button>
+      </div>
+      <dl class="props">
+        <div><dt>先決條件</dt><dd>完成第2章收車教學；取得 Slim Jim。</dd></div>
+        <div><dt>外站報酬</dt><dd>一般無追蹤器車約 $1,000 起；車款及車況影響價錢，唔係每輛 $10,000。</dd></div>
+        <div><dt>重複性</dt><dd>可重複；售車後有短暫冷卻，PowerPyx 報約 2 分鐘。</dd></div>
+        <div><dt>成本／風險</dt><dd>工具費未有一致報價；偷車可能引來警察，撞車亦可能減價。</dd></div>
+      </dl>
+      <ol class="steps">
+        <li><h3>先用 Waink 掃車</h3><p>查看保安、追蹤器同預期售價；揀無追蹤器、低調舊款車。</p></li>
+        <li><h3>離開車房門口先搵車</h3><p>Moses 唔收喺佢車房附近偷嘅車；PowerPyx 建議 Port Gellhorn 主路。</p></li>
+        <li><h3>用 Slim Jim 開門，再交車</h3><p>按遊戲提示啟動車輛，盡量完整駛入 Moses 車房。車房關門就等冷卻，唔好不停撞門。</p></li>
+      </ol>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/" target="_blank" rel="noopener noreferrer">PowerPyx：第2章條件、拒收範圍及冷卻</a></li>
+        <li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-make-money/" target="_blank" rel="noopener noreferrer">PC Gamer：低調舊車、Slim Jim 及售價</a></li>
+        <li><a href="https://www.gamespot.com/articles/gta-6-tips-everything-i-wish-i-knew-before-i-started-playing/" target="_blank" rel="noopener noreferrer">GameSpot：Waink 顯示保安及售價</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="ch3" data-search="pay n spray 賣車 第3章 ocean beach key cloner 追蹤器">
+      <div class="section-head">
+        <div>
+          <span class="caption">第3章</span>
+          <h2>Pay ’n’ Spray 賣車：短途補錢</h2>
+        </div>
+        <button type="button" class="mark" data-mark="money-pns" aria-pressed="false">標記</button>
+      </div>
+      <dl class="props">
+        <div><dt>先決條件</dt><dd>第3章解鎖售車；有標準追蹤器／無匙車時，要先有相應偷車工具。</dd></div>
+        <div><dt>外站報酬</dt><dd>PowerPyx 報好車約 $4,000 起；Polygon 嘅 Ocean Beach 個案約 $7,000，唔係固定保證。</dd></div>
+        <div><dt>重複性</dt><dd>可重複，但有短暫冷卻；未核到統一秒數。</dd></div>
+        <div><dt>成本／風險</dt><dd>唔收高級追蹤器車；唔好為咗高報價偷自己未識處理嘅車。</dd></div>
+      </dl>
+      <ol class="steps">
+        <li><h3>搵附近泊定嘅車</h3><p>Polygon 建議 Ocean Beach 分店附近街道／東面停車場；先掃售價同追蹤器種類。</p></li>
+        <li><h3>按工具能力揀車</h3><p>Slim Jim 對應早期合適車輛；無匙車要有 Key Cloner。高級追蹤器車唔好送呢度。</p></li>
+        <li><h3>短途交車後先做其他活動</h3><p>駛入 Pay ’n’ Spray 選售車；冷卻期間唔可以連續無限交車。</p></li>
+      </ol>
+      <ul class="links">
+        <li><a href="https://www.polygon.com/gta-6-how-to-make-money-become-rich-fast-grand-theft-auto/" target="_blank" rel="noopener noreferrer">Polygon：Ocean Beach 路線及冷卻</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/" target="_blank" rel="noopener noreferrer">PowerPyx：第3章售車與標準追蹤器</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="ch3" data-search="珠寶 後門 snap gun 第3章 yasmani capri victoria lee blanc giroux 夾萬">
+      <div class="section-head">
+        <div>
+          <span class="caption">第3章</span>
+          <h2>珠寶店後門路線：中期主力</h2>
+        </div>
+        <button type="button" class="mark" data-mark="money-jewel" aria-pressed="false">標記</button>
+      </div>
+      <dl class="props">
+        <div><dt>先決條件</dt><dd>第3章珠寶教學後；建議已取得 Snap Gun，並可帶另一位主角同行。</dd></div>
+        <div><dt>外站報酬</dt><dd>PowerPyx 報每店 $10,000–$25,000；實際睇店舖、搜刮量及銷贓價。</dd></div>
+        <div><dt>重複性</dt><dd>可做多間店；同店重置間隔未核實，唔當無限即刷。</dd></div>
+        <div><dt>成本／風險</dt><dd>警報、武裝保安、CCTV 同逃走風險；工具／彈藥成本未有統一數字。</dd></div>
+      </dl>
+      <ol class="steps">
+        <li><h3>先揀有後門嘅店</h3><p>地圖查看保安及室內平面；Polygon 推介 Capri 嘅 Victoria Lee Jeweler、Decor District 嘅 Blanc and Giroux。</p></li>
+        <li><h3>用 Snap Gun 入後門</h3><p>處理附近保安／人群後，用 Focus 搵後室白色警報板並關閉。冇工具唔好假設踢門都靜音。</p></li>
+        <li><h3>現場搵密碼、開夾萬</h3><p>查看便條、螢幕或保安身上。密碼會隨玩家及再次搶劫改變，網上固定密碼唔可靠。</p></li>
+        <li><h3>按風險決定拎幾多</h3><p>關警報並控制人群後先砸櫃；想保守可只拎後室。離開前清本地 CCTV 記錄；雲端攝錄例外。</p></li>
+        <li><h3>甩身後交珠寶</h3><p>Yasmani 對珠寶出價高；先比較已解鎖銷贓人地圖報價。唔好帶住幾次收穫再冒險。</p></li>
+      </ol>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/" target="_blank" rel="noopener noreferrer">PowerPyx：解鎖與報酬</a></li>
+        <li><a href="https://www.polygon.com/gta-6-how-to-make-money-become-rich-fast-grand-theft-auto/" target="_blank" rel="noopener noreferrer">Polygon：兩間目標店及後室路線</a></li>
+        <li><a href="https://www.gamespot.com/articles/gta-6-safe-codes-and-robberies-guide/" target="_blank" rel="noopener noreferrer">GameSpot：警報、隨機密碼與雲端 CCTV</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/" target="_blank" rel="noopener noreferrer">PowerPyx：銷贓價與交貨</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="ch3" data-search="randy 願望清單 超跑 key cloner 第3章 reminders">
+      <div class="section-head">
+        <div>
+          <span class="caption">第3章</span>
+          <h2>Randy 願望清單：無損交靚車</h2>
+        </div>
+        <button type="button" class="mark" data-mark="money-randy" aria-pressed="false">標記</button>
+      </div>
+      <dl class="props">
+        <div><dt>先決條件</dt><dd>第3章取得 Key Cloner 並完成 Randy 超跑教學後。</dd></div>
+        <div><dt>外站報酬</dt><dd>PowerPyx 報完好交車通常 $30,000 起；受車款及損傷影響。</dd></div>
+        <div><dt>重複性</dt><dd>18 款清單目標；唔當同一輛可無限重交。</dd></div>
+        <div><dt>成本／風險</dt><dd>高級追蹤器可能通知警察，車損會削減報酬；唔好盲目搶任何超跑。</dd></div>
+      </dl>
+      <ol class="steps">
+        <li><h3>先睇 Randy 真正要邊款</h3><p>用佢提供嘅泊車位置；手機 Reminders 可傳訊問更多位置。</p></li>
+        <li><h3>確認工具後偷目標車</h3><p>用 Waink 核車及保安；按 Key Cloner 教學操作，唔係普通破窗就一定開得走。</p></li>
+        <li><h3>盡量無損交 Randy</h3><p>優先保車況；唔好送去唔收高級追蹤器嘅 Pay ’n’ Spray。</p></li>
+      </ol>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/" target="_blank" rel="noopener noreferrer">PowerPyx：18 款、工具、Reminders 及報酬</a></li>
+        <li><a href="https://www.gamespot.com/articles/best-ways-to-make-money-fast-in-gta-6/" target="_blank" rel="noopener noreferrer">GameSpot：保車況影響 Randy 收購價</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="mid" data-search="幫派據點 illegal operations tyrone 銷贓 前中期">
+      <div class="section-head">
+        <div>
+          <span class="caption">前中期</span>
+          <h2>幫派據點：有裝備先賺</h2>
+        </div>
+        <button type="button" class="mark" data-mark="money-gang" aria-pressed="false">標記</button>
+      </div>
+      <dl class="props">
+        <div><dt>先決條件</dt><dd>地圖已出現黃色 Illegal Operations 據點；已解鎖相應銷贓人。</dd></div>
+        <div><dt>外站報酬</dt><dd>未有足夠一致單次數字；睇地圖 potential take，同交貨後實收。</dd></div>
+        <div><dt>重複性</dt><dd>多個據點；同點重置條件未核實。</dd></div>
+        <div><dt>成本／風險</dt><dd>敵人多、可能交火再引警察；唔係無風險新手提款機。</dd></div>
+      </dl>
+      <ol class="steps">
+        <li><h3>先睇保安同預估收穫</h3><p>揀能力應付到嘅據點；裝備未齊就唔好硬衝最高保安。</p></li>
+        <li><h3>清理威脅後搜貨</h3><p>以 Focus 協助搵現金及互動物；槍聲可能引來警方，情況差就撤退。</p></li>
+        <li><h3>離場後及早銷贓</h3><p>毒品、珠寶等唔等於可即用現金；比較銷贓價，通常 Tyrone 毒品出價較高。</p></li>
+      </ol>
+      <ul class="links">
+        <li><a href="https://www.gamespot.com/articles/best-ways-to-make-money-fast-in-gta-6/" target="_blank" rel="noopener noreferrer">GameSpot：據點地圖標示及交貨</a></li>
+        <li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-make-money/" target="_blank" rel="noopener noreferrer">PC Gamer：據點風險</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/" target="_blank" rel="noopener noreferrer">PowerPyx：銷贓人分類報價</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="money" data-stage="late" data-search="銀行金庫 後期 運鈔車 marked bills 4星 情報">
+      <div class="section-head">
+        <div>
+          <span class="caption">後期</span>
+          <h2>大型銀行金庫：高報酬、高風險</h2>
+        </div>
+        <button type="button" class="mark" data-mark="money-bank" aria-pressed="false">標記</button>
+      </div>
+      <dl class="props">
+        <div><dt>先決條件</dt><dd>先完成金庫教學支線，再按遊戲解鎖提示做。外站對第4章末／第5章標示有分歧，以任務完成為準。</dd></div>
+        <div><dt>外站報酬</dt><dd>PowerPyx 報單次最高 $205,000；唔係淨利／保底，唔承諾 5 分鐘完成。</dd></div>
+        <div><dt>重複性</dt><dd>PowerPyx 稱後期主要收入；本次未核實各金庫重置間隔。</dd></div>
+        <div><dt>成本／風險</dt><dd>PowerPyx 報即時 4 星；情報可花 $10,000，另有裝備成本及失貨風險。</dd></div>
+      </dl>
+      <ol class="steps">
+        <li><h3>跟運鈔車到銀行</h3><p>金庫唔可以普通撬鎖或炸開；等運鈔保安開門送錢，窗口好短。</p></li>
+        <li><h3>趁開門入內取貨</h3><p>帶同伴分擔滿袋，並預先諗撤退車位。留意警報；唔好為清空而拖到被包圍。</p></li>
+        <li><h3>逃走後先落袋為安</h3><p>離開現場並安全處理通緝，再交 marked bills 俾銷贓人。高額總值唔代表已入戶口。</p></li>
+      </ol>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/" target="_blank" rel="noopener noreferrer">PowerPyx：金庫條件、4 星、情報費與最高報酬</a></li>
+        <li><a href="https://www.gamespot.com/articles/gta-6-safe-codes-and-robberies-guide/" target="_blank" rel="noopener noreferrer">GameSpot：跟運鈔車、短暫開門及袋容量</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/" target="_blank" rel="noopener noreferrer">PowerPyx：另一頁章數不同，勿只按章數判斷</a></li>
+      </ul>
+    </article>
+
+    <!-- TIPS -->
+    <article class="card section" data-topic="tips" data-search="存款 buckme atm family savings checking 現金 地板儲藏 交貨">
+      <div class="section-head">
+        <div><h2>先守住啲錢</h2></div>
+        <button type="button" class="mark" data-mark="tips-keep" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>賺完先存款，留幾百蚊現金</h3>
+          <p>解鎖 BuckMe 後，用 app 搵 ATM 存錢。留少量現金應付現金限定商販／隨機事件；未有戶口時可用 Jason 房內地板儲藏。來源：Guardian、PC Gamer。</p>
+        </div>
+        <div>
+          <h3>Family Savings 唔係活期錢包</h3>
+          <p>入咗就唔可以提返出嚟；先預留武器、交通同任務開支，再考慮轉入。Checking Account 滿額可能令收款 pending。來源：GamesRadar+、PC Gamer。</p>
+        </div>
+        <div>
+          <h3>大單完成後先交貨</h3>
+          <p>贓物袋唔係安全銀行：死亡會失貨，放車尾箱亦可能因車被扣／丟失而出事。不同媒體對扣車後可否取回貨有分歧，唔好靠扣車保貨。來源：GameSpot、PC Gamer。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.theguardian.com/games/2026/nov/19/tips-for-playing-grand-theft-auto-vi" target="_blank" rel="noopener noreferrer">Guardian：ATM 與現金風險</a></li>
+        <li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-bank-cash/" target="_blank" rel="noopener noreferrer">PC Gamer：留少量現金、地板儲藏及扣車說法</a></li>
+        <li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-money-buckme-bank-account-manage/" target="_blank" rel="noopener noreferrer">GamesRadar+：Checking 與不可提款儲蓄</a></li>
+        <li><a href="https://www.gamespot.com/articles/gta-6-tips-everything-i-wish-i-knew-before-i-started-playing/" target="_blank" rel="noopener noreferrer">GameSpot：失貨與交貨風險</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="tips" data-search="搶劫 警報 snap gun 夾萬密碼 dye pack jammer cctv 染色包">
+      <div class="section-head">
+        <div><h2>搶之前，少做幾樣白工</h2></div>
+        <button type="button" class="mark" data-mark="tips-prep" aria-pressed="false">標記</button>
+      </div>
+      <ol class="steps">
+        <li><h3>先睇地圖保安、預估收穫同後門</h3><p>中／高保安建議等可雙人行動；另一位主角可幫手控制人群。</p></li>
+        <li><h3>Snap Gun 入門，關警報再搜</h3><p>Focus 可標示警報板、敵人及密碼線索；普通砸門、砸櫃可能觸發警報。</p></li>
+        <li><h3>夾萬密碼要現場搵</h3><p>GameSpot 多次遊玩見到密碼隨機，重搶同店亦會變。唔好浪費時間抄固定密碼表。</p></li>
+        <li><h3>冇 Dye Pack Jammer，暫緩銀行／貸款店</h3><p>染色包會令贓款作廢；工具隨第3章推進解鎖，marked bills 仲要交銷贓人。</p></li>
+        <li><h3>分清普通 CCTV 同雲端 CCTV</h3><p>普通記錄可喺後室清；雲端圖示代表唔可以靠刪本地記錄消除證據。</p></li>
+      </ol>
+      <ul class="links">
+        <li><a href="https://www.gamespot.com/articles/gta-6-safe-codes-and-robberies-guide/" target="_blank" rel="noopener noreferrer">GameSpot：完整搶劫、染色包及 CCTV 指南</a></li>
+        <li><a href="https://www.polygon.com/gta-6-how-to-make-money-become-rich-fast-grand-theft-auto/" target="_blank" rel="noopener noreferrer">Polygon：後門店舖路線</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="tips" data-search="focus 戰鬥 逃走 換裝 撤退車 waink 通緝">
+      <div class="section-head">
+        <div><h2>戰鬥、逃走同開車</h2></div>
+        <button type="button" class="mark" data-mark="tips-combat" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>Focus 幫你先睇清楚</h3>
+          <p>預設同時按兩邊搖桿；有槍時短暫慢動作瞄準，非戰鬥可標示附近重要物件。自訂按鍵以你嘅設定為準。來源：GameSpot。</p>
+        </div>
+        <div>
+          <h3>唔好喺警察眼前換裝就當甩身</h3>
+          <p>留意外貌、服裝、武器、車輛、攝錄同同伴識別指標；脫離視線後換車／換外觀，唔保證只除面罩就成功。來源：GameSpot、Guardian。</p>
+        </div>
+        <div>
+          <h3>提早停好撤退車</h3>
+          <p>車位要方便離開；有掩蔽停車場有助整理貨同換裝。帶大量袋時唔好只睇電單車快：GameSpot 指電單車冇袋儲存位。來源：GameSpot。</p>
+        </div>
+        <div>
+          <h3>偷車前掃描，交車盡量唔撞</h3>
+          <p>Waink 會顯示保安、售價同登記費；高級追蹤器同無匙系統要對應工具。想留低嘅車亦唔等於偷完已屬於你。來源：GameSpot。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.gamespot.com/articles/gta-6-tips-everything-i-wish-i-knew-before-i-started-playing/" target="_blank" rel="noopener noreferrer">GameSpot：Focus、車輛保安與通緝指標</a></li>
+        <li><a href="https://www.gamespot.com/articles/gta-6-safe-codes-and-robberies-guide/" target="_blank" rel="noopener noreferrer">GameSpot：撤退及泊車計劃</a></li>
+        <li><a href="https://www.theguardian.com/games/2026/nov/19/tips-for-playing-grand-theft-auto-vi" target="_blank" rel="noopener noreferrer">Guardian：掩蔽與換車</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="tips" data-search="手動存檔 hard save retry checkpoint fast walk reminders 雜誌">
+      <div class="section-head">
+        <div><h2>省時間，保留選擇</h2></div>
+        <button type="button" class="mark" data-mark="tips-time" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>每章另留手動存檔</h3>
+          <p>GameSpot 建議保留每章 hard save，方便返回舊安全屋及錯過嘅對話；唔好只靠同一個自動檔。</p>
+        </div>
+        <div>
+          <h3>任務內失手，可考慮 Retry Checkpoint</h3>
+          <p>Guardian 指故事任務暫停選單可重試檢查點；唔好當自由活動亦可抹走一切後果。</p>
+        </div>
+        <div>
+          <h3>慢慢行嫌太慢，試 Fast Walk</h3>
+          <p>Guardian 核實選項可改預設步行速度；按個人手感調，唔提供未核實嘅最佳靈敏度數字。</p>
+        </div>
+        <div>
+          <h3>卡住唔知做咩，睇手機 Reminders</h3>
+          <p>GameSpot 指可搵相關訊息、可回覆短訊同可致電人物；閱讀雜誌／傳單要完整翻閱先可能解鎖資訊。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.gamespot.com/articles/gta-6-tips-everything-i-wish-i-knew-before-i-started-playing/" target="_blank" rel="noopener noreferrer">GameSpot：存檔、Reminders 同閱讀</a></li>
+        <li><a href="https://www.theguardian.com/games/2026/nov/19/tips-for-playing-grand-theft-auto-vi" target="_blank" rel="noopener noreferrer">Guardian：Fast Walk 與 Retry Checkpoint</a></li>
+      </ul>
+    </article>
+
+    <!-- HIDDEN MISSIONS -->
+    <article class="card section" data-topic="hidden" data-kind="mission" data-search="臭鼬猿 kirk skunk ape 傳單 隱藏任務 lucia pelican valley 麻醉步槍">
+      <div class="section-head">
+        <div><h2>臭鼬猿／Kirk 支線：傳單開始嘅隱藏任務</h2></div>
+        <button type="button" class="mark" data-mark="hidden-kirk" aria-pressed="false">標記</button>
+      </div>
+      <dl class="props">
+        <div><dt>先決條件</dt><dd>第一章起可開始。PowerPyx 報第一、第三段只可夜晚進行；第三段要可以操作 Lucia。</dd></div>
+        <div><dt>觸發</dt><dd>完整閱讀臭鼬猿傳單，電話 Contacts 打俾 Kirk。</dd></div>
+        <div><dt>報酬</dt><dd>PowerPyx 報第一段完成後 $1,000。稍後段獨特麻醉步槍係 PowerPyx 單一來源，見下面收埋段。</dd></div>
+        <div><dt>重複／錯過</dt><dd>PowerPyx 將呢條列入計算 Strangers &amp; Freaks 的支線，並寫故事後仍可做；未見錯過就永遠冇嘅寫法。</dd></div>
+      </dl>
+      <ol class="steps">
+        <li><h3>先搵傳單</h3><p>Polygon 舉 Key Lento 嘅 Shrimp &amp; Save；PowerPyx 舉 Hamlet 嘅 Skeeter 酒吧。PC Gamer 亦話店舖窗同電線桿都有。</p></li>
+        <li><h3>讀完就打電話</h3><p>閱讀後主角會存起 Kirk 號碼；打出去任務會被標記。</p></li>
+        <li><h3>夜晚去沼澤跟 Kirk</h3><p>可以瞓覺調時間。PowerPyx 建議武器輪盤取手電；使用 Focus 跟聲音都有出處。</p></li>
+      </ol>
+      <p>PC Gamer 另講一個近開場嘅目擊：由 Jason 喺 Key Lento 屋企對出碼頭坐船，橫過 Gambit Bay，去半島西面盡頭死路。上岸前會提示用 Focus 跟聲，再追入紅樹林。呢個係探索目擊，之後仍要靠傳單先開任務。</p>
+      <details class="spoiler">
+        <summary>第二、第三段：位置與後續報酬（預設收埋）</summary>
+        <p>第二段要你自己喺 Pelican Valley（Mariana County，Key Lento 西北）搵三個發光樹枝像。Polygon 建議先去西北 Thorpe Adventures 換氣墊船。三個位置：Thorpe Adventures 南面；水道之間一塊獨立樹林；南面一條窄長樹林盡頭。搵完等 Kirk 再聯絡。</p>
+        <p>第三段 PowerPyx 報喺 Cottonmouth Lake 附近、只限 Lucia、只限夜晚；上直升機時會得到獨特變體 Mister Mangrove Laird 350（單一來源）。任務末段有選擇，可能影響額外金錢；呢度唔寫選擇結果。</p>
+      </details>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-search-for-the-skunk-ape-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：第一段觸發、夜晚與 $1,000</a></li>
+        <li><a href="https://www.polygon.com/gta-6-skunk-ape-tree-effigies-locations-where-to-find/" target="_blank" rel="noopener noreferrer">Polygon：Shrimp &amp; Save 傳單與樹像位置</a></li>
+        <li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-bigfoot-location-skunk-ape/" target="_blank" rel="noopener noreferrer">PC Gamer：Gambit Bay 附近目擊</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-all-strangers-freaks-side-missions/" target="_blank" rel="noopener noreferrer">PowerPyx：Strangers &amp; Freaks 清單</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="hidden" data-kind="mission" data-search="grayson 梳化 ign 單一來源 ff50 hyde island 狙擊槍">
+      <div class="section-head">
+        <div><h2>Grayson 幫人搬梳化（IGN 單一來源）</h2></div>
+        <button type="button" class="mark" data-mark="hidden-grayson" aria-pressed="false">標記</button>
+      </div>
+      <details class="spoiler">
+        <summary>觸發與報酬（預設收埋；單一來源）</summary>
+        <p>未另文核到同樣觸發與槍款。IGN 西班牙文寫：去地圖北部 Grayson，見到一位女士將梳化搬上貨車後斗，幫手可觸發特殊互動。文中描述之後會進入生存考驗，地點後來說係地圖北部 Hyde Island；打倒對手後得到重型狙擊槍變體 FF50「Furtivo de la Isla」。過程有埋伏，建議先手動存檔。錯過條件未核到。</p>
+      </details>
+      <ul class="links">
+        <li><a href="https://es.ign.com/grand-theft-auto-vi/235763/el-mejor-rifle-de-francotirador-de-gta-6-esta-escondido-en-una-mision-que-es-facil-pasar-por-alto" target="_blank" rel="noopener noreferrer">IGN（西班牙文）：Grayson 互動與 FF50</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="hidden" data-kind="mission" data-search="可錯過 支線 shirley yago 第一章 第三章 100%">
+      <div class="section-head">
+        <div><h2>可錯過嘅支線（預設收埋，唔講劇情）</h2></div>
+        <button type="button" class="mark" data-mark="hidden-missable" aria-pressed="false">標記</button>
+      </div>
+      <details class="spoiler">
+        <summary>可錯過提示（預設收埋，唔講劇情）</summary>
+        <p>PowerPyx 報第一章有少量只限當章嘅可選支線（例如 Shirley 兩段打雜），並不計入 Strangers &amp; Freaks 獎杯或 100%。第三章 Yago 有一段賽車寫明限時可錯過。想做就盡早做；100% 清單本身 PowerPyx 報可在故事後補齊，不需要呢啲可錯過任務。</p>
+      </details>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-all-strangers-freaks-side-missions/" target="_blank" rel="noopener noreferrer">PowerPyx：Strangers &amp; Freaks（含可錯過標記）</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-100-completion-checklist-guide/" target="_blank" rel="noopener noreferrer">PowerPyx：100% 清單未見必錯項目</a></li>
+      </ul>
+    </article>
+
+    <!-- HIDDEN WEAPONS -->
+    <article class="card section" data-topic="hidden" data-kind="weapon" data-search="金色 獨特武器 variants ammu-nation stow longarms kingfisher 隱藏武器">
+      <div class="section-head">
+        <div><h2>金色圖示獨特武器：先要識得保留</h2></div>
+        <button type="button" class="mark" data-mark="hidden-weapons" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>金色手槍圖示係獨特／傳奇變體</h3>
+          <p>GameSpot 指可以在幫派據點（例如 Kingfisher）搵到。選單裏名稱通常以黃色顯示；通常唔可改配件。</p>
+        </div>
+        <div>
+          <h3>拾起唔等於永遠保留</h3>
+          <p>GameSpot 警告：任務推進、瞓覺等可能令裝備消失。長槍放進自己車嘅車尾箱（Stow Longarms）；放在唔屬你嘅車可能連車一齊失。</p>
+        </div>
+        <div>
+          <h3>去武器櫃查 Variants</h3>
+          <p>Ammu-Nation 或有武器櫃嘅車房，選 Manage Weapons，在武器類別上按 Triangle／Y 看 Variants，再按 X／A 裝備。依你自訂按鍵為準。</p>
+        </div>
+        <div>
+          <h3>唔使完整座標清單</h3>
+          <p>PowerPyx 資料庫報約 130 款變體；100% 只要接觸 50／66 把標準武器，唔使集齊變體。今次未用足夠交叉來源去列出所有座標。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.gamespot.com/articles/how-to-save-weapons-you-find-in-gta-6/" target="_blank" rel="noopener noreferrer">GameSpot：保留拾獲武器、車尾箱與 Variants</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-100-completion-checklist-guide/" target="_blank" rel="noopener noreferrer">PowerPyx：變體總數與 100% 武器要求</a></li>
+      </ul>
+    </article>
+
+    <!-- COLLECTIBLES -->
+    <article class="card section" data-topic="hidden" data-kind="collect" data-search="可卡因火烈鳥 收藏卡 收集品 flamingo cards 當舖 雜誌">
+      <div class="section-head">
+        <div><h2>可賣嘅收集品：牌同可卡因火烈鳥</h2></div>
+        <button type="button" class="mark" data-mark="hidden-collectibles" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>可卡因火烈鳥：先識嘴喙</h3>
+          <p>PowerPyx 報共 125 隻粉紅火烈鳥藏著包裹；黑白嘴喙才算，黃黑嘴喙裝飾打不爛亦不計。射擊身體後可拾包裹交銷贓人，銷贓不是 100% 必要條件。任何時間都可搵；找到第一隻後，Progress &gt; Collections &gt; Exploration 可追蹤。100% 要毀 100／125 隻。</p>
+        </div>
+        <div>
+          <h3>早期位置例子（PowerPyx 單一來源）</h3>
+          <p>Belpoint 島東南碼頭；同帶燃燒火烈鳥嘅屋企／海灘貨櫃附近；Watson Bay 東緣旁一座被垃圾圍住嘅汽車旅館西南角。唔係全部清單。</p>
+        </div>
+        <div>
+          <h3>收藏卡：賣唔會清左圖鑑</h3>
+          <p>共 18 套、480 張。室內多在櫃面或壁上；室外多在黃色電話箱或工具箱。可在任何當舖賣，PowerPyx 報視稀有度約 $20 至 $1,000 以上；賣走不會從收藏清單刪除，重複卡可再賣但不重複計算套裝。不能像舊作一樣用買嘢刷。100% 要完成 15／18 套；完成 3 套有另一個獎杯。</p>
+        </div>
+        <div>
+          <h3>讀雜誌、書同傳單可解鎖資訊</h3>
+          <p>GameSpot 提示要完整翻閱，有時會解鎖電話聯絡人或地圖點。PowerPyx 報 100% 要找 30／34 份讀物（含換書）。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-all-cocaine-flamingo-locations/" target="_blank" rel="noopener noreferrer">PowerPyx：可卡因火烈鳥</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-all-collectible-card-sets-locations/" target="_blank" rel="noopener noreferrer">PowerPyx：收藏卡規則與當舖售價</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-100-completion-checklist-guide/" target="_blank" rel="noopener noreferrer">PowerPyx：100% 清單</a></li>
+        <li><a href="https://www.gamespot.com/articles/gta-6-tips-everything-i-wish-i-knew-before-i-started-playing/" target="_blank" rel="noopener noreferrer">GameSpot：閱讀可解鎖資訊</a></li>
+      </ul>
+    </article>
+
+    <article class="card section" data-topic="hidden" data-kind="collect" data-search="100% waink 望遠鏡 作弊 手錶 火烈鳥 收集 通關">
+      <div class="section-head">
+        <div><h2>其他有用嘅追蹤，唔使集齊每一件</h2></div>
+        <button type="button" class="mark" data-mark="hidden-track" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>100% 大部分只要做一部分</h3>
+          <p>PowerPyx 報：清單要通關後先能在 Progress &gt; Stats 打開，但之前進度仍計。WAiNK 掃描任何 200／277 款基礎載具（不包括 280 款 Standout）；望遠鏡研究任何 100／255 種動物（唔使獵）；WAiNK 地點 100 次；水底發現 33／33；Kenton 尋寶 5／7 套。</p>
+        </div>
+        <div>
+          <h3>通關後才能用作弊，用完不能存檔</h3>
+          <p>GameSpot 報作弊要先通過主線一次；啟用之後不能存檔。部分解鎖與收集有關（例如毀 50 隻可卡因火烈鳥、集齊 Vice City Flamingos 24 張卡、找 10／20 塊豪華手錶）。呢度唔列作弊碼，亦唔當作第一週目搵錢手法。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-100-completion-checklist-guide/" target="_blank" rel="noopener noreferrer">PowerPyx：100% 要求</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-collectible-guide-progress-database/" target="_blank" rel="noopener noreferrer">PowerPyx：Progress 資料庫</a></li>
+        <li><a href="https://www.gamespot.com/articles/all-gta-6-cheats-and-how-to-unlock-them/" target="_blank" rel="noopener noreferrer">GameSpot：作弊解鎖條件與存檔限制</a></li>
+      </ul>
+    </article>
+
+    <!-- EASTER EGGS -->
+    <article class="card section" data-topic="hidden" data-kind="egg" data-search="觀賞彩蛋 dexter 公寓 最高塔 書本 millport liberty city red dead">
+      <div class="section-head">
+        <div><h2>觀賞彩蛋：唔等於有獎勵嘅隱藏</h2></div>
+        <button type="button" class="mark" data-mark="hidden-eggs" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>Dexter 公寓（鎖落，唔入得到去）</h3>
+          <p>GameSpot：Vice City 東部 Washington Island，在 Pay ’n’ Spray 同 Vice Beach Top Fun Drones 圖示之間，找南面有圓柱狀（實際係樓梯）嘅淺藍色建築。走樓梯上二樓，沿走廊向西走到盡頭轉角單位。門鎖落；天台有針筒、附近碼頭有一艘船，係觀賞向物。</p>
+        </div>
+        <div>
+          <h3>Vice City 最高塔上嘅真蛋</h3>
+          <p>GameSpot：爬 Vice City 本區最高塔，發現者估計約 7 分鐘。塔頂鳥巢有蛋，Jason 或 Lucia 可拾起來扔。扔完會播短過場；結果收埋，留俾你自己體驗。今次未用第二個主流媒體核實更細嘅郡名或座標。</p>
+        </div>
+        <div>
+          <h3>可讀的書本彩蛋</h3>
+          <p>GameSpot：Millport 嘅 Jacob’s Tavern 有西部小說，提到 Red Dead 嘅 New Austin。第一章 Jason 屋企靠後門小餐桌有 Liberty City 回憶錄。屬觀賞；如果想解鎖資訊，仍要完整翻閱。</p>
+        </div>
+      </div>
+      <details class="spoiler">
+        <summary>扔蛋之後會發生乜（預設收埋）</summary>
+        <p>GameSpot 自己只寫會播一段短過場，並建議玩家親身體驗。呢度唔轉述過場內容。</p>
+      </details>
+      <ul class="links">
+        <li><a href="https://www.gamespot.com/articles/gta-6-easter-eggs-list-and-locations/" target="_blank" rel="noopener noreferrer">GameSpot：彩蛋總覽（塔、書本）</a></li>
+        <li><a href="https://www.gamespot.com/articles/how-to-find-dexter-morgans-apartment-in-gta-6/" target="_blank" rel="noopener noreferrer">GameSpot：Dexter 公寓路線</a></li>
+      </ul>
+    </article>
+
+    <!-- MAP -->
+    <article class="card section" data-topic="map" data-search="社群地圖 用法 搜尋 標記 oplay 互動地圖">
+      <div class="section-head">
+        <div><h2>點用呢張社群地圖</h2></div>
+        <button type="button" class="mark" data-mark="map-how" aria-pressed="false">標記</button>
+      </div>
+      <ol class="steps">
+        <li><h3>揀分類或搜尋</h3><p>作者說明可用中英文搜，例如「海景飯店」或 Ocean View，亦可只開某一類。呢啲係網站功能說明，今次冇逐項操作核實。</p></li>
+        <li><h3>由畫面中心搵附近未去過嘅點</h3><p>作者說明可排出最近一批尚未標記去過嘅點，方便收附近。</p></li>
+        <li><h3>喺呢部裝置記低已去／收藏</h3><p>作者說明唔登入都會存在呢部裝置；可選 Discord 登入先跨裝置同步。進度屬於嗰個網站，唔會自動同步到呢份攻略頁。</p></li>
+      </ol>
+      <p>作者帖文亦提到可自行放分組標記、量距離、用連結分享標記；一般建築預設收起，可用搜尋搵。資料仍在補，作者於 2026年11月21日（香港時間）帖文寫過紅鸛、名錶等類別仲缺點位。網站上嘅地點總數係作者公布、會改動，唔係官方數字，呢頁亦冇逐點核對。</p>
+      <a class="btn-link" href="https://oplay.cc/gta6/map" target="_blank" rel="noopener noreferrer">開啟 GTA 6 互動地圖</a>
+    </article>
+
+    <article class="card section" data-topic="map" data-search="地圖 使用限制 第三方 錯位 劇透 未齊 oplay">
+      <div class="section-head">
+        <div><h2>使用限制</h2></div>
+        <button type="button" class="mark" data-mark="map-limits" aria-pressed="false">標記</button>
+      </div>
+      <div class="rows">
+        <div>
+          <h3>第三方、非官方</h3>
+          <p>唔好當 Rockstar 官方地圖服務。網站提供不同底圖，包括佢哋稱為印刷風格嘅底圖；呢頁唔保證底圖同官方印刷版一致，亦唔當官方認證。</p>
+        </div>
+        <div>
+          <h3>可能有錯位或劇透</h3>
+          <p>點位可能唔啱、過時，或者過早看到你未想知嘅內容。去到當地以遊戲內實況為準。</p>
+        </div>
+        <div>
+          <h3>資料未齊</h3>
+          <p>作者帖文寫明部分收集品類別仍缺點位。發現錯點可在網站回報；呢頁唔代為核對或更新佢嘅資料庫。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://oplay.cc/gta6/map" target="_blank" rel="noopener noreferrer">揪團開黑：GTA 6 互動地圖（繁體中文，oplay.cc）</a></li>
+      </ul>
+    </article>
+
+    <!-- CHECK -->
+    <article class="card section" data-topic="check" data-search="查證 限制 落差 金庫 扣車 moses 舊作 地圖書籤">
+      <div class="section-head">
+        <div><h2>查證範圍同刻意唔寫嘅內容</h2></div>
+        <button type="button" class="mark" data-mark="check-scope" aria-pressed="false">標記</button>
+      </div>
+      <p>已讀 PowerPyx、GameSpot、PC Gamer、Polygon、GamesRadar+、Guardian 及 IGN 本次可取得嘅推出期原文。核心賣車／珠寶做法有跨媒體對照；金額及部分隱藏細節仍可能只由其中一篇報告。冇親自操作遊戲，唔會寫成「實測必賺」。</p>
+      <div class="rows">
+        <div>
+          <h3>Moses 金額有落差</h3>
+          <p>GameSpot 提到特定合約可上萬；PowerPyx／PC Gamer 一般收車約千幾起。頁面分清一般售車，唔套上合約高價。</p>
+        </div>
+        <div>
+          <h3>金庫解鎖章數有落差</h3>
+          <p>PowerPyx 搵錢頁寫第4章末，銷贓頁寫第5章；以完成遊戲內金庫教學為準，唔保證到章就開。</p>
+        </div>
+        <div>
+          <h3>扣車貨物能否取回有落差</h3>
+          <p>PC Gamer 話可取回，GameSpot 警告失貨；本頁採保守策略，唔依賴車尾箱永久安全。</p>
+        </div>
+        <div>
+          <h3>冇列每小時收益</h3>
+          <p>行車、冷卻、裝備、損傷、失敗同交貨時間都會改變淨收益，唔將單次最高值乘大做承諾。</p>
+        </div>
+        <div>
+          <h3>冇移植舊作技巧</h3>
+          <p>冇股票刺殺、Cayo Perico、GTA Online 生意等 GTA V／Online 做法；亦冇無限錢漏洞、第一週目作弊碼或未證實最佳設定。</p>
+        </div>
+        <div>
+          <h3>傳單地點有多個例子，唔衝突</h3>
+          <p>Kirk 傳單 PowerPyx 舉 Skeeter 酒吧，Polygon 舉 Shrimp &amp; Save，PC Gamer 講店舖窗與電線桿；當作多個見面，唔當單一必去之處。</p>
+        </div>
+        <div>
+          <h3>隱藏內容刻意唔收嘅</h3>
+          <p>UFO／綁架獎杯、密碼鎖實驗室等只見較弱轉載或位置未定，今次唔收。未有足夠交叉核實嘅隱藏載具座標清單。IGN 早期免費武器影片沒可用文字座標，唔臆測。GameSpot 提到 Gullet Marsh 嘅密切接觸，可能同可選 Kirk 支線唔係同一件事，唔合併。</p>
+        </div>
+        <div>
+          <h3>社群互動地圖係第三方書籤</h3>
+          <p>揪團開黑地圖係社群站點，唔係 Rockstar 官方服務；地點總數係作者公布而且會變，呢頁唔當官方或已核實數字來列。使用時要同遊戲內實況對過。</p>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/" target="_blank" rel="noopener noreferrer">PowerPyx：Money Guide</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/" target="_blank" rel="noopener noreferrer">PowerPyx：Fence Guide</a></li>
+        <li><a href="https://www.gamespot.com/articles/gta-6-tips-everything-i-wish-i-knew-before-i-started-playing/" target="_blank" rel="noopener noreferrer">GameSpot：Tips</a></li>
+        <li><a href="https://www.gamespot.com/articles/gta-6-safe-codes-and-robberies-guide/" target="_blank" rel="noopener noreferrer">GameSpot：Robberies</a></li>
+        <li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-make-money/" target="_blank" rel="noopener noreferrer">PC Gamer：Money Guide</a></li>
+        <li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-bank-cash/" target="_blank" rel="noopener noreferrer">PC Gamer：Cash Guide</a></li>
+        <li><a href="https://www.polygon.com/gta-6-how-to-make-money-become-rich-fast-grand-theft-auto/" target="_blank" rel="noopener noreferrer">Polygon：Money Guide</a></li>
+        <li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-money-buckme-bank-account-manage/" target="_blank" rel="noopener noreferrer">GamesRadar+：Money Management</a></li>
+        <li><a href="https://www.theguardian.com/games/2026/nov/19/tips-for-playing-grand-theft-auto-vi" target="_blank" rel="noopener noreferrer">Guardian：15 Tips</a></li>
+        <li><a href="https://www.gamespot.com/articles/gta-6-easter-eggs-list-and-locations/" target="_blank" rel="noopener noreferrer">GameSpot：Easter Eggs</a></li>
+        <li><a href="https://www.gamespot.com/articles/how-to-find-dexter-morgans-apartment-in-gta-6/" target="_blank" rel="noopener noreferrer">GameSpot：Dexter Apartment</a></li>
+        <li><a href="https://www.gamespot.com/articles/how-to-save-weapons-you-find-in-gta-6/" target="_blank" rel="noopener noreferrer">GameSpot：Save Weapons</a></li>
+        <li><a href="https://www.gamespot.com/articles/all-gta-6-cheats-and-how-to-unlock-them/" target="_blank" rel="noopener noreferrer">GameSpot：Cheats</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-search-for-the-skunk-ape-walkthrough/" target="_blank" rel="noopener noreferrer">PowerPyx：Skunk Ape</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-all-strangers-freaks-side-missions/" target="_blank" rel="noopener noreferrer">PowerPyx：Strangers &amp; Freaks</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-all-cocaine-flamingo-locations/" target="_blank" rel="noopener noreferrer">PowerPyx：Flamingos</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-all-collectible-card-sets-locations/" target="_blank" rel="noopener noreferrer">PowerPyx：Collectible Cards</a></li>
+        <li><a href="https://www.powerpyx.com/gta-6-100-completion-checklist-guide/" target="_blank" rel="noopener noreferrer">PowerPyx：100% Checklist</a></li>
+        <li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-bigfoot-location-skunk-ape/" target="_blank" rel="noopener noreferrer">PC Gamer：Skunk Ape Sighting</a></li>
+        <li><a href="https://www.polygon.com/gta-6-skunk-ape-tree-effigies-locations-where-to-find/" target="_blank" rel="noopener noreferrer">Polygon：Tree Effigies</a></li>
+        <li><a href="https://es.ign.com/grand-theft-auto-vi/235763/el-mejor-rifle-de-francotirador-de-gta-6-esta-escondido-en-una-mision-que-es-facil-pasar-por-alto" target="_blank" rel="noopener noreferrer">IGN：FF50 Event</a></li>
+        <li><a href="https://oplay.cc/gta6/map" target="_blank" rel="noopener noreferrer">揪團開黑：GTA 6 互動地圖</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>非官方指南。攻略正文依據 2026年11月20日（香港時間）核對嘅推出期媒體整理；互動地圖書籤於 2026年11月21日（香港時間）加入。本站唔隸屬於 Rockstar Games 或 Take-Two Interactive。《Grand Theft Auto》及相關名稱屬於其權利人。互動地圖係第三方書籤，進度唔會同步到呢頁。補丁、存檔進度、外站點位及操作設定可能改變。</p>
+    </div>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
