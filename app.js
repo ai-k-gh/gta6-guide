@@ -64,8 +64,7 @@
       var okSearch = !q || textOf(card).indexOf(q) !== -1;
       var show;
       if (q) {
-        show = okSearch && (topic === "all" || okTopic) && okStage && okKind;
-        if (topic === "all") show = okSearch;
+        show = okSearch;
       } else {
         show = okTopic && okStage && okKind;
       }
